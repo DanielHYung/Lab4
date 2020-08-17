@@ -5,11 +5,16 @@ using UnityEngine;
 public class LoadAssets : MonoBehaviour
 {
     public GameObject redObj;
+    [SerializeField]
+    private GameObject blueObj;
 
     // Start is called before the first frame update
     void Start()
     {
         LoadAssets redObj = gameObject.GetComponent<LoadAssets>();
+        Instantiate(redObj, new Vector3(2f, 0f, 0f), Quaternion.identity);
+
+        
     }
 
     // Update is called once per frame
